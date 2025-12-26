@@ -1,59 +1,161 @@
-## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
+# 🌐 Campus Connect  
+A smart and interactive campus navigation and accessibility reporting system built using **React**, **Firebase**, and **Google Maps API**.  
+Campus Connect helps students and staff report accessibility issues in real time, navigate the campus efficiently, and assists administrators in improving campus infrastructure.
 
-## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+---
 
-## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+## 🚀 Features
 
-## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+### 🔹 Real-time Issue Reporting
+- Report issues like lift outages, blocked ramps, noise disturbances, safety hazards, etc.
+- Double-click or long-press the map to select a location.
+- Modal-based reporting with issue type & description.
 
-## System Architecture
-<!--Embed the system architecture diagram as shown below-->
+### 🔹 Live Issue Map
+- Issues update instantly using **Firestore realtime sync**.
+- Emoji-based markers for visual clarity.
+- InfoWindow shows issue details, reporter, and timestamp.
 
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
+### 🔹 Admin Controls
+- Admin user can delete reported issues.
+- Ensures clean and manageable issue status.
+
+### 🔹 Campus Navigation
+- Route guidance between key campus locations.
+- Uses Google Directions API for walking paths.
+- Map type switching: Roadmap, Satellite, Terrain.
+
+### 🔹 User-Friendly Utilities
+- “My Location” button for instant centering.
+- Filters for Lift, Ramp, Noise, etc.
+- Fully responsive UI with long-press mobile support.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React + Vite  
+- Tailwind CSS  
+- Lucide Icons  
+
+### Backend / Cloud
+- Firebase Firestore  
+- Firebase Authentication  
+
+### APIs
+- Google Maps JavaScript API  
+- Google Directions API  
+
+---
+
+## 📁 Folder Structure
+```
+campusconnect/
+│── public/
+│── src/
+│ ├── components/
+│ │ ├── MapContainer.jsx
+│ │ ├── Login.jsx
+│ │ ├── ReportIssueModal.tsx
+│ │ └── ui/ (custom UI components)
+│ ├── lib/
+│ │ ├── firebase.js
+│ │ └── utils.ts
+│ ├── assets/
+│ ├── App.jsx
+│ ├── main.jsx
+│── .env
+│── package.json
+│── vite.config.js
+
+```
+---
+
+## ⚙️ Setup & Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Kamal-Raj-A/mini_project_R2W1.git
+cd mini_project_R2W1
+```
+
+### 2️⃣ Install dependencies
+```
+npm install
+```
 
 
-## Output
+### 3️⃣ Create a .env file
 
-<!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
+Add the following environment variables:
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
+VITE_GOOGLE_MAPS_API_KEY=your_api_key_here
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
 
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
+### 4️⃣ Run the project locally:
+```
+npm run dev
+```
 
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
+### 5️⃣ Build for production
+```
+npm run build
+```
 
+### 🌍 Deployment
 
-## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
+✅ Vercel
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
+Import GitHub repo
 
-## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+Add environment variables
 
+Deploy automatically
 
+✅ Netlify
 
+Build: npm run build
+Publish: dist
 
+### 🧪 Test Cases
+
+Issue reporting workflow
+
+Live sync with Firestore
+
+Admin deletion
+
+Navigation routing tests
+
+Map type switching
+
+Long-press detection tests
+
+### 🔮 Future Enhancements
+
+AI-based automatic issue classification
+
+Photo upload with ML-based issue detection
+
+Issue resolution status tracking
+
+Indoor navigation (WiFi/Bluetooth beacons)
+
+Voice-activated reporting for accessibility
+
+Heatmap of frequently reported areas
+
+### 🏆 Conclusion
+
+Campus Connect delivers a scalable, user-friendly, and impactful solution for enhancing campus accessibility and navigation. By integrating real-time reporting, map-based visualization, and smart navigation tools, it improves safety, efficiency, and inclusivity across the campus environment.
+
+### 👨‍💻 Authors
+
+Kamal Raj
+Gmail : kamalraj3106@gmail.com
